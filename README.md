@@ -2,6 +2,8 @@
 
 A lightweight and flexible Gatsby starter to help you get your portfolio and blog up and running
 
+![gatsby-prismic-starter-prist-preview](https://user-images.githubusercontent.com/5288685/60453158-5e716900-9bfe-11e9-9319-b2b83738ea62.png)
+
 ## 🚀 Quick start
 
 **Clone, install CLI, run.**
