@@ -9,6 +9,7 @@
     "@emotion/styled": "^10.0.12",
     "gatsby": "^2.8.4",
     "gatsby-image": "^2.1.2",
+    "gatsby-link": "^2.2.0",
     "gatsby-plugin-catch-links": "^2.0.12",
     "gatsby-plugin-emotion": "^4.1.0",
     "gatsby-plugin-manifest": "^2.1.1",
