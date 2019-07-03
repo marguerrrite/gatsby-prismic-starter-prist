@@ -6,7 +6,6 @@ import { RichText } from "prismic-reactjs";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
 import Layout from "components/Layout";
-import SEO from "components/SEO";
 
 const PostHeroContainer = styled("div")`
     max-height: 500px;
@@ -95,7 +94,6 @@ const PostDate = styled("div")`
 const Post = ({ post }) => {
     return (
         <>
-            <SEO title={`${post.post_title[0].text} | Prist, Gatsby & Prismic Starter`} />
             <Layout>
                 <PostCategory>
                     {RichText.render(post.post_category)}

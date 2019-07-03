@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 import styled from "@emotion/styled";
 import Layout from "components/Layout";
 import ProjectCard from "components/ProjectCard";
-import SEO from "components/SEO";
 
 const WorkTitle = styled("h1")`
     margin-bottom: 1em;
@@ -12,7 +11,6 @@ const WorkTitle = styled("h1")`
 
 const Work = ({ projects }) => (
     <>
-        <SEO title="Work | Prist, Gatsby & Prismic Starter" />
         <Layout>
             <WorkTitle>
                 Work

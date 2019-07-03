@@ -5,7 +5,6 @@ import { Link, graphql } from 'gatsby';
 import { RichText } from "prismic-reactjs";
 import Button from "components/_ui/Button";
 import Layout from "components/Layout";
-import SEO from "components/SEO";
 
 const ProjectHeroContainer = styled("div")`
     background: ${colors.grey200};
@@ -52,7 +51,6 @@ const WorkLink = styled(Link)`
 const Project = ({ project }) => {
     return (
         <>
-            <SEO title={`${project.project_title[0].text} | Prist, Gatsby & Prismic Starter`} />
             <Layout>
                 <ProjectTitle>
                     {RichText.render(project.project_title)}

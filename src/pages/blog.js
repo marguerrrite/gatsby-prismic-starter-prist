@@ -5,7 +5,6 @@ import styled from "@emotion/styled";
 import dimensions from "styles/dimensions";
 import Layout from "components/Layout";
 import PostCard from "components/PostCard";
-import SEO from "components/SEO";
 
 const BlogTitle = styled("h1")`
     margin-bottom: 1em;
@@ -29,7 +28,6 @@ const BlogGrid = styled("div")`
 
 const Blog = ({ posts }) => (
     <>
-        <SEO title="Blog | Prist, Gatsby & Prismic Starter" />
         <Layout>
             <BlogTitle>
                 Blog

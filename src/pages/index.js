@@ -9,7 +9,6 @@ import Button from "components/_ui/Button";
 import About from "components/About";
 import Layout from "components/Layout";
 import ProjectCard from "components/ProjectCard";
-import SEO from "components/SEO";
 
 const Hero = styled("div")`
     padding-top: 2.5em;
@@ -91,7 +90,6 @@ const WorkAction = styled(Link)`
 
 const RenderBody = ({ home, projects }) => (
     <>
-        <SEO title="Prist | Gatsby & Prismic Starter" />
         <Hero>
             <>
                 {RichText.render(home.hero_title)}
