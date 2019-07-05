@@ -38,6 +38,11 @@ const ProjectCardContainer = styled(Link)`
             }
         }
 
+        .ProjectCardContent::before {
+            opacity: 0.02;
+            transition: all 150ms ease-in-out;
+        }
+
         .ProjectCardImageContainer::before {
             opacity: 0.2;
             transition: all 150ms ease-in-out;
@@ -48,6 +53,20 @@ const ProjectCardContainer = styled(Link)`
 const ProjectCardContent = styled("div")`
     background: white;
     padding: 4em 3em 2.25em 3em;
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: ${colors.blue500};
+        mix-blend-mode: multiply;
+        opacity: 0;
+        transition: all 150ms ease-in-out;
+    }
 
     @media(max-width:950px) {
         padding: 3.25em 2.5em 2em 2.5em;
@@ -136,7 +155,7 @@ const ProjectCardImageContainer = styled("div")`
 
 const ProjectCard = ({ category, title, description, thumbnail, uid}) => (
     <ProjectCardContainer to={`/work/${uid}`}>
-        <ProjectCardContent>
+        <ProjectCardContent className="ProjectCardContent">
             <ProjectCardCategory>
                 {category[0].text}
             </ProjectCardCategory>
