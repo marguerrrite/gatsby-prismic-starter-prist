@@ -1,6 +1,6 @@
 # Prist | A Gatsby & Prismic Starter
 
-A lightweight and flexible Gatsby starter to help you get your portfolio and blog up and running
+A light-themed starter powered by Gatsby and Prismic to showcase portfolios and blogs.
 
 ![gatsby-prismic-starter-prist-preview](https://user-images.githubusercontent.com/5288685/60453158-5e716900-9bfe-11e9-9319-b2b83738ea62.png)
 
