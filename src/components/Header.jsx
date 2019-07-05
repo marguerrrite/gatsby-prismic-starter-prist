@@ -13,10 +13,6 @@ const HeaderContainer = styled("div")`
 const HeaderContent = styled("div")`
     display: flex;
     justify-content: space-between;
-
-    a {
-        //display: inherit;
-    }
 `
 
 const HeaderLinks = styled("div")`
@@ -57,11 +53,20 @@ const HeaderLinks = styled("div")`
             bottom: -3px;
             right: 50%;
             margin-right: -9px;
+            transition: 100ms ease-in-out background;
+        }
+
+        &:hover {
+            &:after {
+                background: ${colors.blue500};
+                transition: 100ms ease-in-out background;
+            }
         }
 
         &.Link--is-active {
             &:after {
                 background: ${colors.blue500};
+                transition: 100ms ease-in-out background;
             }
         }
     }
