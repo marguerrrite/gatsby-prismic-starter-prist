@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import Helmet from "react-helmet";
 import Moment from 'react-moment';
 import { graphql } from 'gatsby';
 import { RichText } from "prismic-reactjs";
@@ -91,9 +92,47 @@ const PostDate = styled("div")`
     margin: 0;
 `
 
-const Post = ({ post }) => {
+const Post = ({ post, meta }) => {
     return (
         <>
+            <Helmet
+                title={`${post.post_title[0].text} | Prist, Gatsby & Prismic Starter`}
+                titleTemplate={`%s | ${meta.title}`}
+                meta={[
+                    {
+                        name: `description`,
+                        content: meta.description,
+                    },
+                    {
+                        property: `og:title`,
+                        content: `${post.post_title[0].text} | Prist, Gatsby & Prismic Starter`,
+                    },
+                    {
+                        property: `og:description`,
+                        content: meta.description,
+                    },
+                    {
+                        property: `og:type`,
+                        content: `website`,
+                    },
+                    {
+                        name: `twitter:card`,
+                        content: `summary`,
+                    },
+                    {
+                        name: `twitter:creator`,
+                        content: meta.author,
+                    },
+                    {
+                        name: `twitter:title`,
+                        content: meta.title,
+                    },
+                    {
+                        name: `twitter:description`,
+                        content: meta.description,
+                    },
+                ].concat(meta)}
+            />
             <Layout>
                 <PostCategory>
                     {RichText.render(post.post_category)}
@@ -127,15 +166,16 @@ const Post = ({ post }) => {
 
 export default ({ data }) => {
     const postContent = data.prismic.allPosts.edges[0].node;
+    const meta = data.site.siteMetadata;
     return (
-        <Post post={postContent} />
+        <Post post={postContent} meta={meta}/>
     )
 }
 
 Post.propTypes = {
     post: PropTypes.object.isRequired,
+    meta: PropTypes.object.isRequired,
 };
-
 
 export const query = graphql`
     query PostQuery($uid: String) {
@@ -156,6 +196,13 @@ export const query = graphql`
                         }
                     }
                 }
+            }
+        }
+        site {
+            siteMetadata {
+                title
+                description
+                author
             }
         }
     }
