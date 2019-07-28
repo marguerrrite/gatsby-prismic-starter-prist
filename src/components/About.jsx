@@ -7,7 +7,6 @@ import PropTypes from "prop-types";
 
 const AboutContainer = styled("div")`
     padding-top: 1em;
-    padding-bottom: 3em;
     display: grid;
     grid-template-columns: 8em 1fr 8em;
     grid-gap: 3em;

@@ -23,6 +23,10 @@ const ProjectCardContainer = styled(Link)`
         grid-template-columns: 1fr;
     }
 
+    @media(max-width:${dimensions.maxwidthMobile}px) {
+        margin-bottom: 2em;
+    }
+
     &:hover {
         box-shadow: 0px 9px 24px rgba(0, 0, 0, 0.1);
         transition: all 150ms ease-in-out;

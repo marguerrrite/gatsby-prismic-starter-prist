@@ -17,7 +17,7 @@ const HeaderContent = styled("div")`
 
 const HeaderLinks = styled("div")`
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, auto);
     grid-gap: 7em;
     justify-content: flex-end;
     width: 100%;
@@ -28,7 +28,7 @@ const HeaderLinks = styled("div")`
     }
 
     @media(max-width: ${dimensions.maxwidthMobile}px) {
-        grid-gap: 4.5em;
+        grid-gap: 2.5em;
     }
 
     a {

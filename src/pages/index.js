@@ -50,12 +50,16 @@ const Hero = styled("div")`
 `
 
 const Section = styled("div")`
-    margin-bottom: 12em;
+    margin-bottom: 10em;
     display: flex;
     flex-direction: column;
 
     @media(max-width:${dimensions.maxwidthTablet}px) {
         margin-bottom: 4em;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
     }
 `
 
@@ -200,6 +204,7 @@ export const query = graphql`
                                 url
                             }
                         }
+                        content
                         about_title
                         about_bio
                         about_links {
