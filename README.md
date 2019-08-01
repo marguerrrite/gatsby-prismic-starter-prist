@@ -4,19 +4,34 @@ A light-themed starter powered by Gatsby and Prismic to showcase portfolios and 
 
 ![gatsby-prismic-starter-prist-preview](https://user-images.githubusercontent.com/5288685/60453158-5e716900-9bfe-11e9-9319-b2b83738ea62.png)
 
-## 🚀 Quick start
+## ✨ Features
 
-**Clone, install CLI, run.**
+- [Emotion](https://emotion.sh/docs/styled) styled components
+- Blog layout and pages
+- Portfolio layout and pages
+- Mobile ready
 
-    Navigate into your new site’s directory and start it up.
+## 🚀 Getting Started
 
-    ```sh
-    cd prist/
-    gatsby develop
-    ```
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/margueriteroth/gatsby-prismic-starter-prist)
 
-**Open the source code and start editing!**
+1. **Create a Gatsby site.**
 
-    Your site is now running at `http://localhost:8000`!
+Use the Gatsby CLI to create a new site, specifying this project
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+```sh
+gatsby new project-name https://github.com/margueriteroth/gatsby-prismic-starter-prist
+```
+
+2. **Start developing.**
+
+Navigate into your new site's directory and start it up.
+
+```sh
+cd project-name
+gatsby develop
+```
+
+3. **Open the code and start customizing!**
+
+Your site is now running at `http://localhost:8000`!
