@@ -4,6 +4,8 @@ A light-themed starter powered by Gatsby and Prismic to showcase portfolios and 
 
 ![gatsby-prismic-starter-prist-preview](https://user-images.githubusercontent.com/5288685/60453158-5e716900-9bfe-11e9-9319-b2b83738ea62.png)
 
+### 👩‍💻 [Demo website](http://prist.marguerite.io)
+
 ## ✨ Features
 
 - [Emotion](https://emotion.sh/docs/styled) styled components
