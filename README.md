@@ -12,6 +12,7 @@ A light-themed starter powered by [Gatsby v2](https://www.gatsbyjs.org) and [Pri
 - [Emotion](https://emotion.sh/docs/styled) styled components
 - Blog layout and pages
 - Portfolio layout and pages
+- Google Analytics
 - Mobile ready
 
 ## 🚀 Getting Started
