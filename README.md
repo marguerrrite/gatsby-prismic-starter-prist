@@ -44,12 +44,14 @@ Your site is now running at `http://localhost:8000`!
 _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
 
-## Configuring Prismic
+## 👩‍🎤 Configuring Prismic
 
 1. **Create account and repo**
+
 Head over to [Prismic](https://prismic.io/signup) and create your new account. Once you have an account, create a new repository.
 
 2. **Add the repo to your new project**
+
 In your `gatsby-config.js` file, add your Prismic Repo name to the `repositoryName` field:
 
 ```
@@ -62,11 +64,13 @@ In your `gatsby-config.js` file, add your Prismic Repo name to the `repositoryNa
     },
 ```
 3. **Define your Custom Types**
+
 This starter uses 3 Custom Types:
 ![image](https://user-images.githubusercontent.com/5288685/62646196-c01ea480-b91b-11e9-8d30-d9fbf8d1df36.png)
 
 
 3a. **Homepage**
+
 ![image](https://user-images.githubusercontent.com/5288685/62645556-741f3000-b91a-11e9-9b5b-e29288a4cd92.png)
 
 Create the following fields.
@@ -87,11 +91,13 @@ Head over to Content and create a new page using the Homepage Custom Type:
 Remember to save and publish! Repeat for other Custom Types.
 
 3b. **Post**
+
 ![image](https://user-images.githubusercontent.com/5288685/62645940-3b338b00-b91b-11e9-9684-9ca5b98882a7.png)
 ![image](https://user-images.githubusercontent.com/5288685/62645970-4d152e00-b91b-11e9-89db-b2b0ac4e26a1.png)
 
 
 3c. **Project**
+
 ![image](https://user-images.githubusercontent.com/5288685/62646080-8188ea00-b91b-11e9-8f61-2227581c0ee4.png)
 ![image](https://user-images.githubusercontent.com/5288685/62646133-9b2a3180-b91b-11e9-9a88-c0c9eef4bbcf.png)
 
