@@ -29,10 +29,11 @@ gatsby new YOUR-PROJECT-NAME https://github.com/margueriteroth/gatsby-prismic-st
 
 2. **Start developing.**
 
-Navigate into your new site's directory and start it up.
+Navigate into your new site's directory, install node modules, and start it up.
 
 ```sh
 cd YOUR-PROJECT-NAME
+npm install
 gatsby develop
 ```
 
