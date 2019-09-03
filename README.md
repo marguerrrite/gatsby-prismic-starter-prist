@@ -22,7 +22,7 @@ A light-themed starter powered by [Gatsby v2](https://www.gatsbyjs.org) and [Pri
 
 1. **Create a Gatsby site.**
 
-Use the Gatsby CLI to create a new site, specifying this project
+Use the Gatsby CLI to create a new site, specifying this project. If you don't have the CLI installed already, see [Gastby instructions](https://www.gatsbyjs.org/tutorial/part-zero/#using-the-gatsby-cli).
 
 ```sh
 gatsby new YOUR-PROJECT-NAME https://github.com/margueriteroth/gatsby-prismic-starter-prist
