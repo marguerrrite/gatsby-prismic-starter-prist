@@ -72,7 +72,7 @@ This starter uses 3 Custom Types:
 Create the three following Custom Types by selecting "Create New" in the top right of your screen, and selecting either Repeatable Type or Single Type.
 
 **1. Homepage** (Single)
-
+![image](https://user-images.githubusercontent.com/5288685/65046592-f265ed80-d92e-11e9-8700-4602b9038c0d.png)
 In the right panel, select *JSON editor* and paste the following:
 ```
 {
