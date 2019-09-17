@@ -69,37 +69,226 @@ In your `gatsby-config.js` file, add your Prismic Repo name to the `repositoryNa
 This starter uses 3 Custom Types:
 ![image](https://user-images.githubusercontent.com/5288685/62646196-c01ea480-b91b-11e9-8d30-d9fbf8d1df36.png)
 
+Create the three following Custom Types by selecting "Create New" in the top right of your screen, and selecting either Repeatable Type or Single Type.
 
-3a. **Homepage**
+**1. Homepage** (Single)
 
-![image](https://user-images.githubusercontent.com/5288685/62645556-741f3000-b91a-11e9-9b5b-e29288a4cd92.png)
+In the right panel, select *JSON editor* and paste the following:
+```
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "homepage"
+      }
+    },
+    "hero_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "heading1, hyperlink",
+        "allowTargetBlank" : true,
+        "label" : "hero title",
+        "placeholder" : "Hello world"
+      }
+    },
+    "hero_button_text" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "hyperlink",
+        "label" : "hero button text",
+        "placeholder" : "Click me!"
+      }
+    },
+    "hero_button_link" : {
+      "type" : "Link",
+      "config" : {
+        "allowTargetBlank" : true,
+        "label" : "hero button link",
+        "placeholder" : "Click me!"
+      }
+    },
+    "content" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "allowTargetBlank" : true,
+        "label" : "content"
+      }
+    },
+    "about_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading3",
+        "label" : "about title",
+        "placeholder" : "About"
+      }
+    },
+    "about_bio" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, preformatted, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "allowTargetBlank" : true,
+        "label" : "about bio",
+        "placeholder" : "Lorem ipsum..."
+      }
+    },
+    "about_links" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "about_link" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "hyperlink",
+              "allowTargetBlank" : true,
+              "label" : "about link",
+              "placeholder" : "ie. Github"
+            }
+          }
+        },
+        "label" : "about links"
+      }
+    }
+  }
+}
+```
 
-Create the following fields.
+**2. Post** (Repeatable)
+```
+{
+  "Main" : {
+    "post_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label" : "post title"
+      }
+    },
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "post uid"
+      }
+    },
+    "post_category" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading5",
+        "label" : "post category"
+      }
+    },
+    "post_preview_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em, hyperlink, list-item",
+        "label" : "post preview description"
+      }
+    },
+    "post_author" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Prist Team", "Marguerite Roth" ],
+        "default_value" : "Prist Team",
+        "label" : "post author"
+      }
+    },
+    "post_hero_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "post hero image"
+      }
+    },
+    "post_hero_annotation" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading6, strong, em, hyperlink",
+        "allowTargetBlank" : true,
+        "label" : "post hero annotation"
+      }
+    },
+    "post_body" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "allowTargetBlank" : true,
+        "label" : "post body"
+      }
+    },
+    "post_date" : {
+      "type" : "Date",
+      "config" : {
+        "label" : "post date"
+      }
+    }
+  }
+}
+```
 
-API IDs:
-* uid
-* hero_title
-* hero_button_text
-* hero_button_link
-* content
-* about_title
-* about_bio
-* about_links
+*** Project *** (Repeatable)
+```{
+  "Main" : {
+    "project_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "project title"
+      }
+    },
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "project uid"
+      }
+    },
+    "project_category" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading5",
+        "label" : "project category"
+      }
+    },
+    "project_preview_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em, hyperlink",
+        "allowTargetBlank" : true,
+        "label" : "project preview description"
+      }
+    },
+    "project_preview_thumbnail" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "project preview thumbnail"
+      }
+    },
+    "project_hero_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "project hero image"
+      }
+    },
+    "project_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "allowTargetBlank" : true,
+        "label" : "project description"
+      }
+    },
+    "project_post_date" : {
+      "type" : "Date",
+      "config" : {
+        "label" : "project post date"
+      }
+    }
+  }
+}
+```
 
-Head over to Content and create a new page using the Homepage Custom Type:
-![image](https://user-images.githubusercontent.com/5288685/62645767-e4c64c80-b91a-11e9-8baf-c1ead93a9b5f.png)
-
-Remember to save and publish! Repeat for other Custom Types.
-
-3b. **Post**
-
-![image](https://user-images.githubusercontent.com/5288685/62645940-3b338b00-b91b-11e9-9684-9ca5b98882a7.png)
-![image](https://user-images.githubusercontent.com/5288685/62645970-4d152e00-b91b-11e9-89db-b2b0ac4e26a1.png)
-
-
-3c. **Project**
-
-![image](https://user-images.githubusercontent.com/5288685/62646080-8188ea00-b91b-11e9-8f61-2227581c0ee4.png)
-![image](https://user-images.githubusercontent.com/5288685/62646133-9b2a3180-b91b-11e9-9a88-c0c9eef4bbcf.png)
-
-Utilize the endpoint playground to see that your data is in the right spot: YOUR-PRISMIC-REPO-NAME.prismic.io/api/v2
