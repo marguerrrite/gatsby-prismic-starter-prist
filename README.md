@@ -228,7 +228,8 @@ In the right panel, select *JSON editor* and paste the following:
 ```
 
 *** Project *** (Repeatable)
-```{
+```
+{
   "Main" : {
     "project_title" : {
       "type" : "StructuredText",
