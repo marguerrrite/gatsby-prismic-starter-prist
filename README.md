@@ -293,3 +293,34 @@ In the right panel, select *JSON editor* and paste the following:
 }
 ```
 
+---
+
+# Tips & Common issues:
+
+Thank you to everyone for contributing!
+
+#### Prismic Data sourcing problems:
+
+Gatsby needs Prismic to return data, meaning the field cannot be left empty. 
+
+From [@georgex1999](https://github.com/georgex1999)
+* If you, like me, are new to prismic.io.. you can't just setup the Custom types as stated in the readme you also need to add Content to them and Publish. This may seem obvious but stumped me for a while!
+* As far as I could tell you need to fill in ALL the fields with content to get the site up and running. Otherwise you get a NULL value error.
+* I had an error that stumped me for a while and it was because I hadn't added the link properly to the social media link. I'll attach a screenshot of this in case it catches anyone else out and the error it brings up.
+![image](https://user-images.githubusercontent.com/5288685/86611700-0857a400-bf7d-11ea-9ec1-4f02f874e5af.png)
+https://github.com/margueriteroth/gatsby-prismic-starter-prist/issues/5#issuecomment-578314236
+
+
+From [@kylemhudson](https://github.com/kylemhudson)
+* I'd recommend adding a few more points to the end of "3. Define your Custom Types" telling the user to fill out at least enough content in the Custom Types to populate one of each type, and definitely show adding the URL to the About section. Adding enough content to everything else doesn't do it, you have to add the URL type within About for the project to work.
+https://github.com/margueriteroth/gatsby-prismic-starter-prist/issues/5#issuecomment-653038425
+
+
+---
+
+I've had issues fetching updated data from Prismic. Running `gatsby clean` clears the cache.
+
+Additionally, clearing the cache, node modules, and package-lock.json can also clear your slate. 
+1. `rm -rf node_modules .cache package-lock.json`
+2. `npm install`
+
